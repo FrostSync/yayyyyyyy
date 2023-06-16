@@ -5,6 +5,10 @@
     font-family: Arial;
 }
 
+html *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .get-started-button{
     background-color: rgb(0, 255, 255);
     border: none;
