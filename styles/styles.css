@@ -1,12 +1,15 @@
+html *{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    margin: auto;
+}
+
 .h1-text{
     text-align: center;
 }
 .intro-text{
     font-family: Arial;
-}
-
-html *{
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .get-started-button{
@@ -30,6 +33,7 @@ html *{
 
 .active[data-tab-content]{
     display: block;
+    text-align: center;
 }
 
 .tabs {
@@ -43,13 +47,15 @@ html *{
 
 .tab {
     cursor: pointer;
-    padding: 10px;
+    padding: .75rem;
+    padding-left: 8.247rem;
+    padding-right: 8.247rem;
 }
 
 .tab.active {
-    background-color: #CCC;
+    background-color: rgb(27, 78, 38);
 }
 
 .tab:hover {
-    background-color: grey;
+    background-color: rgb(24, 124, 46);
 }

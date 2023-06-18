@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ez money</title>
+    <link rel="stylesheet" href="styles/styles.css"><link rel="stylesheet" href="styles/carousel.css">
+    <script src="scripts/script.js" defer></script>
 </head>
+
 <body>
+        <!-- tabs -->
+    <ul class="tabs">
+        <li data-tab-target="#home" class="active tab">Home</li>
+        <li data-tab-target="#gainz" class="tab">gainz</li>
+        <li data-tab-target="#ez-money" class="tab">ez money</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" data-tab-content class="active">
+            <h1><a href="index.html">Home</a></h1>
+            <p>This is the home</p>
+        </div>
+
+        <div id="gainz" data-tab-content>
+            <h1><a href="gainz.html"> massive gainz</a></h1>
+            <p>the gainz</p>
+        </div>
+
+        <div id="ez-money" data-tab-content>
+            <h1><a href="money.html">money</a></h1>
+            <p>how to get the money</p>
+        </div>
+
+    </div>
     
+    <!--slideshow container-->
+    <div class="slideshow-container">
+        <!--full-width images with number and caption text-->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/spongebob.png" style="width: 100%;">
+            <div class="text">Caption text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/money-spread.jpg" style="width: 100%;">
+            <div class="text">Caption text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/money-spread.jpg" style="width: 100%;">
+            <div class="text">Caption text</div>
+        </div>
+
+        <!--next and prev buttons-->
+        <a class="prev" onclick="plusSlides(-1)">prev</a>
+        <a class="next" onclick="plusSlides(1)">next</a>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+    </div>
 </body>
 </html>
