@@ -9,29 +9,33 @@
 
 <body>
     <!-- tabs -->
-    <ul class="tabs">
-        <li data-tab-target="#home" class="active tab">Home</li>
-        <li data-tab-target="#gainz" class="tab">gainz</li>
-        <li data-tab-target="#ez-money" class="tab">ez money</li>
-    </ul>
+    <header class="primary-header flex"> 
+        <div></div>
 
-    <div class="tab-content">
-        <div id="home" data-tab-content class="active">
-            <h1><a href="index.html">Home</a></h1>
-            <p>This is the home</p>
-        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only" aria-expanded="false">Menu</span>
+        </button>
 
-        <div id="gainz" data-tab-content>
-            <h1><a href="gainz.html"> massive gainz</a></h1>
-            <p>the gainz</p>
-        </div>
-
-        <div id="ez-money" data-tab-content>
-            <h1><a href="money.html">money</a></h1>
-            <p>how to get the money</p>
-        </div>
-
-    </div>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                <li class="active">
+                    <a href="index.html">
+                        <span aria-hidden="true">00</span>Home
+                    </a>
+                </li>
+                <li>
+                    <a href="gainz.html">
+                        <span aria-hidden="true">01</span>Gainz
+                    </a>
+                </li>
+                <li>
+                    <a href="money.html">
+                        <span aria-hidden="true">02</span>Money
+                    </a>
+                </li>
+            </ul>
+        </nav>        
+       </header>
 
     <div id="swag">
         <h1>swag swag swag </h1>
